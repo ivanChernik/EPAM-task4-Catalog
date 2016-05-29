@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<categories>
+    <category>
+        <subcategory>
+            <news>
+                <news-name>первый мститель в минске</news-name>
+                <provider>relax.by</provider>
+                <date-issue>20.05.2011</date-issue>
+                <news-body>!Стив Роджерс добровольно соглашается принять участие в
+					эксперименте, который превратит его в суперсолдата, известного как
+					Первый мститель. Роджерс вступает в вооруженные силы США вместе с
+					Баки Барнсом
+					и Пегги Картер, чтобы бороться с враждебной организацией
+					ГИДРА,
+					которой управляет безжалостный Красный Череп
+				</news-body>
+            </news>
+            <subcategory-name>комедия</subcategory-name>
+        </subcategory>
+        <category-name>фильмы</category-name>
+    </category>
+    <category>
+        <subcategory>
+            <news>
+                <news-name>Артур Конан Дойл выпустил новый бестселлер</news-name>
+                <provider>Иванов Иван</provider>
+                <date-issue>20.05.1887</date-issue>
+                <news-body>Шерлок Холмс (Sherlock Holmes) один из тех литературных
+					персонажей, который известен практически каждому, включая даже тех,
+					кто ничего не читал о его похождениях. Своим появлением на свет он
+					обязан великому английскому писателю сэру Артуру Конан Дойлю,
+					который познакомил нас с ним в своём романе «Этюд в багровых тонах»
+					в 1887 году.
+				</news-body>
+            </news>
+            <subcategory-name>детективы</subcategory-name>
+        </subcategory>
+        <category-name>книги</category-name>
+    </category>
+    <category>
+        <subcategory>
+            <news>
+                <news-name>Артур Конан Дойл сжог новый бестселлер</news-name>
+                <provider>Черников Иван</provider>
+                <date-issue>20-12-2003</date-issue>
+                <news-body>Сегодня в 3 утра</news-body>
+            </news>
+            <subcategory-name>книги</subcategory-name>
+        </subcategory>
+        <category-name>книги</category-name>
+    </category>
+</categories>
