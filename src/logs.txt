@@ -1,0 +1,18 @@
+ERROR - ServiceException, not valided arguments, operation - find
+by.epam.tc.news_handler.exception.ServiceException: not initialization for finding
+	at by.epam.tc.news_handler.service.impl.NewsServiceImpl.findNews(NewsServiceImpl.java:48)
+	at by.epam.tc.news_handler.command.impl.FindNewsCommand.execute(FindNewsCommand.java:34)
+	at by.epam.tc.news_handler.controller.impl.ControllerImpl.doAction(ControllerImpl.java:19)
+	at by.epam.tc.news_handler.view.TestApp.main(TestApp.java:14)
+Caused by: java.lang.Exception
+	at by.epam.tc.news_handler.service.impl.NewsServiceImpl.findNews(NewsServiceImpl.java:49)
+	... 3 more
+ERROR - ServiceException, not valided arguments, operation - save
+by.epam.tc.news_handler.exception.ServiceException: not initialization for saving
+	at by.epam.tc.news_handler.service.impl.NewsServiceImpl.saveNewNews(NewsServiceImpl.java:29)
+	at by.epam.tc.news_handler.command.impl.SaveNewNewsCommand.execute(SaveNewNewsCommand.java:37)
+	at by.epam.tc.news_handler.controller.impl.ControllerImpl.doAction(ControllerImpl.java:19)
+	at by.epam.tc.news_handler.view.TestApp.main(TestApp.java:16)
+Caused by: java.lang.Exception
+	at by.epam.tc.news_handler.service.impl.NewsServiceImpl.saveNewNews(NewsServiceImpl.java:30)
+	... 3 more

@@ -37,16 +37,4 @@
         </subcategory>
         <category-name>книги</category-name>
     </category>
-    <category>
-        <subcategory>
-            <news>
-                <news-name>Артур Конан Дойл сжог новый бестселлер</news-name>
-                <provider>Черников Иван</provider>
-                <date-issue>20-12-2003</date-issue>
-                <news-body>Сегодня в 3 утра</news-body>
-            </news>
-            <subcategory-name>книги</subcategory-name>
-        </subcategory>
-        <category-name>книги</category-name>
-    </category>
 </categories>

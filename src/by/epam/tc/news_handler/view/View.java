@@ -15,14 +15,13 @@ public class View {
 	}
 	
 	public Request doSaveNews(){
-		News sendingNews = new News("45454","ivan", "20-25-2015", "news ...");
 		Request request = new Request();
 		request.setCommandName("SAVE_NEW_NEWS");
 		request.setProviderNewsName("Черников Иван");
 		request.setNewsName("Артур Конан Дойл сжог новый бестселлер");
 		request.setBodyNews("Сегодня в 3 утра");
-		request.setCategoryName("книги");
-		request.setSubcategoryName("книги");
+		request.setCategoryName("статьи");
+		request.setSubcategoryName("литература");
 		request.setDateNews("20-12-2003");
 		return request;
 	}
