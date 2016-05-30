@@ -38,23 +38,27 @@ public class NewsDAOImpl implements INewsDAO {
 	private void marshallFile(News inputNews, String categoryName,
 			String subcategoryName) {
 		unmarshallFile();
-		Category category = new Category();
-		category.setName(categoryName);
-		Subcategory subcategory = new Subcategory();
-		subcategory.setName(subcategoryName);
-		subcategory.addNews(inputNews);
-		category.addSubcategory(subcategory);
-		categories.addCategory(category);
+		if (!checkSimilarData(inputNews, categoryName, subcategoryName)) {
+			Category category = new Category();
+			category.setName(categoryName);
+			Subcategory subcategory = new Subcategory();
+			subcategory.setName(subcategoryName);
+			subcategory.addNews(inputNews);
+			category.addSubcategory(subcategory);
+			categories.addCategory(category);
 
-		Marshaller jaxbMarshaller = null;
-		try {
-			JAXBContext jaxbContext = JAXBContext.newInstance(Categories.class);
-			jaxbMarshaller = jaxbContext.createMarshaller();
-			jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-			jaxbMarshaller.marshal(categories, new File(PATH));
-		} catch (JAXBException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Marshaller jaxbMarshaller = null;
+			try {
+				JAXBContext jaxbContext = JAXBContext
+						.newInstance(Categories.class);
+				jaxbMarshaller = jaxbContext.createMarshaller();
+				jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT,
+						true);
+				jaxbMarshaller.marshal(categories, new File(PATH));
+			} catch (JAXBException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	}
 
@@ -96,20 +100,24 @@ public class NewsDAOImpl implements INewsDAO {
 		return foundNews;
 
 	}
-	
-	private void print(){
+
+	private boolean checkSimilarData(News inputNews, String categoryName,
+			String subcategoryName) {
 		unmarshallFile();
 		for (Category iterableCategory : categories.getCategoriesList()) {
-
+			if (iterableCategory.getName().equals(categoryName))
+				return true;
 			for (Subcategory iterableSubcategory : iterableCategory
 					.getSubcategoryList()) {
-				System.out.println(iterableSubcategory.getName());
-				for (News iterableNews : iterableSubcategory.getNewsList()){
-					System.out.println(iterableNews);
+				if (iterableSubcategory.getName().equals(subcategoryName))
+					return true;
+				for (News iterableNews : iterableSubcategory.getNewsList()) {
+					if (inputNews.equals(iterableNews))
+						return true;
 				}
 
 			}
 		}
-		
+		return false;
 	}
 }
